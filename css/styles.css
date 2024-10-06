@@ -1,0 +1,303 @@
+/* #region NORMALIZE */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a:link,
+a:hover,
+a:focus,
+a:active,
+a:visited {
+  display: inline-block;
+  font-family: inherit;
+  font-size: inherit;
+  color: currentColor;
+  text-decoration: none;
+}
+
+a,
+article,
+aside,
+body,
+div,
+footer,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+img,
+li,
+nav,
+main,
+ol,
+p,
+section,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  all: unset; /* Remove all default styles */
+  display: inline-block; /* Ensure it behaves like a button */
+  cursor: pointer; /* Show pointer on hover */
+  background: transparent; /* Transparent background */
+  border: none; /* Remove border */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  font-family: inherit; /* Inherit font from parent */
+  font-size: inherit; /* Inherit font size from parent */
+  color: inherit; /* Inherit text color */
+  text-align: center; /* Center text */
+  line-height: inherit; /* Inherit line height */
+  text-decoration: none; /* Remove any text decoration */
+  outline: none; /* Remove default outline */
+  appearance: none; /* Remove platform-specific styling */
+  box-shadow: none; /* Remove shadow */
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+/* #endregion */
+
+html {
+  font-size: 10px;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 1.7rem;
+}
+
+.proof {
+  padding-top: 118px;
+  padding-inline: 20px;
+  padding-bottom: 100px;
+  background-color: #fff;
+  background-image: url('./../images/bg-pattern-top-desktop.svg'),
+    url('./../images/bg-pattern-bottom-desktop.svg');
+  background-position: top left, bottom right;
+  background-repeat: no-repeat;
+}
+
+.proof-header-rating-container {
+  margin-bottom: 71px;
+  display: flex;
+  gap: 32px;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1110px;
+}
+
+.proof-header {
+  flex-basis: 40%;
+}
+
+.proof-title {
+  margin-bottom: 26px;
+  line-height: 0.86;
+  font-size: 5.6rem;
+  font-weight: 700;
+  letter-spacing: -2px;
+  color: #512051;
+}
+
+.proof-desc {
+  line-height: 1.32;
+  font-size: 1.9rem;
+  letter-spacing: -0.63px;
+  color: #927b91;
+}
+
+.proof-ratings {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 54rem;
+}
+
+.proof-ratings-item {
+  display: flex;
+  align-items: center;
+  gap: 32.45px;
+  border-radius: 8px;
+  width: 44.5rem;
+  padding: 20px 20px 20px 32px;
+  background-color: #f7f2f7;
+}
+
+.proof-ratings-item:nth-child(2) {
+  align-self: center;
+}
+
+.proof-ratings-item:last-child {
+  align-self: end;
+}
+
+.proof-ratings-stars {
+  height: 16px;
+  overflow: hidden;
+}
+
+.proof-ratings-star {
+  display: block;
+}
+
+.proof-ratings-desc {
+  font-weight: 700;
+  color: #512051;
+}
+
+.proof-reviews {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  max-width: 1110px;
+}
+
+.proof-reviews-item {
+  border-radius: 8px;
+  height: 234px;
+  padding: 40px 32px 35px 32px;
+  background-color: #512051;
+}
+
+.proof-reviews-item:nth-child(2) {
+  margin-top: 16px;
+}
+
+.proof-reviews-item:last-child {
+  margin-top: 32px;
+}
+
+.proof-avatar {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.proof-author {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  margin-bottom: 31px;
+}
+
+.proof-author-name {
+  margin-bottom: 4px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.proof-author-label {
+  color: #ee69a4;
+}
+
+.proof-review-text {
+  line-height: 1.29;
+  letter-spacing: -0.3px;
+  color: #fff;
+}
+
+.proof-review-text::before {
+  content: '“ ';
+}
+
+.proof-review-text::after {
+  content: ' ”';
+}
+
+@media screen and (min-width: 600px) and (max-width: 1124px) {
+  .proof-reviews-item {
+    height: 256px;
+  }
+
+  .proof-ratings-item {
+    width: 42rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .proof {
+    max-width: 560px;
+    padding-top: 82px;
+  }
+  .proof-header-rating-container {
+    flex-direction: column;
+    margin-bottom: 49px;
+    gap: 39px;
+  }
+
+  .proof-header {
+    flex-basis: auto;
+    text-align: center;
+  }
+
+  .proof-title {
+    margin-bottom: 21px;
+    line-height: 0.8;
+    font-size: 40px;
+    letter-spacing: -1.43px;
+  }
+
+  .proof-ratings {
+    width: 100%;
+    /* align-items: stretch; */
+  }
+
+  .proof-ratings-item {
+    flex-direction: column;
+    gap: 15.23px;
+    width: 100%;
+    padding-top: 16px;
+    padding-bottom: 15px;
+  }
+
+  .proof-reviews {
+    flex-direction: column;
+    gap: 16px;
+    justify-content: start;
+    max-width: 1110px;
+  }
+
+  .proof-reviews-item.proof-reviews-item {
+    margin: 0;
+    height: 204px;
+  }
+
+  .proof-author {
+    margin-bottom: 23px;
+  }
+}
+
+@media screen and (max-width: 504px) {
+  .proof-reviews-item.proof-reviews-item {
+    height: 226px;
+  }
+}
+
+@media screen and (max-width: 407px) {
+  .proof {
+    background-image: url('./../images/bg-pattern-top-mobile.svg'),
+    url('./../images/bg-pattern-bottom-mobile.svg');
+  }
+
+  .proof-reviews-item.proof-reviews-item {
+    height: 248px;
+  }
+}
